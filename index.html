@@ -4,28 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
-    <header></header>
+    <header><img src="images/clock.jpg" /></header>
     <div class="container">
-      <h1>World Clock</h1>
-      <select>
-        <option value="">Select a city</option>
-        <option value="">London</option>
-        <option value="">Paris</option>
-        <option value="">Madrid</option>
+      <h1 class="title">World Clock</h1>
+      <h2 class="subtitle">Select a city</h2>
+      <select id="city">
+        <option value="current">Your current location</option>
+        <option value="Europe/London">London</option>
+        <option value="Europe/Kyiv">Kyiv</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
       </select>
 
-      <div class="location">
+      <div class="location" id="location">
         <div class="city">
-          <h2 class="name">London</h2>
-          <span class="date">May 12th 2025</span>
+          <h3 class="city-name"></h3>
+          <span class="date" id="date"></span>
         </div>
-        <div class="time">
-          <span>14:00</span>
-          <small>AM</small>
-        </div>
+        <div class="time" id="time"></div>
       </div>
     </div>
     <footer>
@@ -34,6 +35,6 @@
         <a href="#">open sourced</a>
       </p>
     </footer>
-    <script href="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

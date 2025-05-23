@@ -1,9 +1,10 @@
 body {
-  background-color: #eaf6f6;
+  background-color: #ffdde3;
   color: #324678;
   font-size: 14px;
   font-weight: 300;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 10px;
 }
 a {
   color: inherit;
@@ -11,21 +12,30 @@ a {
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header img {
-  width: 10%;
+  max-width: 160px;
 }
-h1 {
+
+.title {
   text-align: center;
   color: #66bfbf;
   font-size: 2.3rem;
   font-weight: 400;
 }
+.subtitle {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+}
+
 .container {
   background-color: #fcfefe;
-  max-width: 480px;
+  max-width: 380px;
+  height: 80vh;
   margin: 30px auto;
-  padding: 30px 50px;
+  padding: 30px;
   box-shadow: 6px 4px 6px rgba(175, 139, 139, 0.3);
   border-radius: 3px;
 }
@@ -38,14 +48,15 @@ select {
 }
 .location {
   padding: 10px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
-.name {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-bottom: 3px;
+.city-name {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 .date {
   font-weight: 300;
@@ -53,8 +64,9 @@ select {
 }
 .time {
   color: #f76b8a;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  padding-top: 26px;
 }
 .time small {
   font-size: 0.8rem;
@@ -65,4 +77,14 @@ select {
 }
 footer {
   text-align: center;
+}
+@media (max-width: 428px) {
+  .location {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .time {
+    font-size: 2.3rem;
+  }
 }
